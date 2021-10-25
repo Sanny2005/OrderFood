@@ -96,7 +96,23 @@ body {
   color: white;
 }
 .slide-content {
-  max-width: 400px;
+  max-width: 500px;
+  position: relative;
+}
+.slider-buttons {
+  position: absolute;
+  right: 46px;
+  bottom: 40px;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  width: 100px;
+  justify-content: space-between;
+}
+.slider-button {
+  cursor: pointer;
+}
+.swiper {
   position: relative;
 }
 .slide-title {
@@ -141,6 +157,28 @@ body {
     ),
     url(../img/summer.png);
   background-image: url(../img/summer.png) no-repeat / cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide-autumn {
+  background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.43) 40.45%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(../img/autumn.png);
+  background-image: url(../img/autumn.png) no-repeat / cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide-vitamin {
+  background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.43) 40.45%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(../img/vitamin.png);
+  background-image: url(../img/vitamin.png) no-repeat / cover;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -402,6 +440,7 @@ body {
   display: flex;
   /*  flex-wrap: wrap; */
   margin: -18px;
+  flex-wrap: wrap;
 }
 .privilege-card {
   width: 270px;
@@ -464,4 +503,92 @@ body {
 .social-link {
   margin-left: 20px;
   text-decoration: none;
+}
+/* ---------------------------------- */
+@media (max-width: 1260px) {
+  .container {
+    max-width: 960px;
+  }
+  .search-form {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .tabs-content {
+    flex-wrap: wrap;
+  }
+  .tabs-card {
+    flex: 50%;
+    /*  max-width: calc(50%-30px); */
+    max-width: 450px;
+  }
+}
+/* ---------------------------------- */
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+  .slide {
+    padding: 70px;
+  }
+  .delivery-card {
+    /*  width: calc(50%-30px); */
+    width: 350px;
+  }
+  .tabs-card {
+    flex: 50%;
+    max-width: 350px;
+  }
+  .footer-logo {
+    margin-right: 40px;
+  }
+  .privilege-cards {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 560px;
+  }
+  .header {
+    flex-wrap: wrap;
+  }
+  .search-form {
+    order: 5;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .promo {
+    flex-wrap: wrap;
+  }
+  .delivery-card {
+    /*  width: calc(50%-30px); */
+    width: 100%;
+  }
+  .delivery-card {
+    /*  width: calc(50%-30px); */
+    width: 100%;
+  }
+  .tabs-content {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 90%;
+  }
+  .tabs-card {
+    max-width: 100%;
+  }
+  .slider-buttons {
+    right: 30px;
+    bottom: 20px;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    justify-content: space-between;
+  }
 }
